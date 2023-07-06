@@ -1,7 +1,13 @@
+import Navbar from "@/components/Navbar";
 import React from "react";
+import { Box } from '@chakra-ui/react'
 
 export default function DashboardScreen() {
     return (
-        <div>hello</div>
+        <Box
+            paddingX={10}
+        >
+            <Navbar />
+        </Box>
     )
 }
