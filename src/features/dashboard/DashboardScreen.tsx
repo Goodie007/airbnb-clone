@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import React from "react";
 import { Box } from "@chakra-ui/react";
+import SubNavbar from "@/components/subnavbar/SubNavbar";
 
 export default function DashboardScreen() {
   return (
@@ -12,6 +13,7 @@ export default function DashboardScreen() {
         borderBottomWidth={1}
         borderColor={'#DCDCDC'}
       ></Box>
+      <SubNavbar />
     </Box>
   );
 }
