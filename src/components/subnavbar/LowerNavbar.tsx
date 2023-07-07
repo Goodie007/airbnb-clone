@@ -12,7 +12,7 @@ export default function LowerNavbar() {
       //paddingTop={100}
       width={"100%"}
       height={70}
-      top={{ base: 500, md: 500, lg: 607 }}
+      top={{ base: 520, md: 500, lg: 607 }}
       bottom={2}
       borderTopWidth={1}
       paddingLeft={{ base: 4, md: 7, lg: 10 }}
