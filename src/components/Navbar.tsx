@@ -155,7 +155,9 @@ export default function Navbar() {
             borderRadius={20}
             background={'transparent'}
             borderWidth={1}
+            padding={'10px'}
         >
+          <Icon type="plug" />
         </Box>
         </HStack>
       </HStack>

@@ -179,15 +179,12 @@ const Plug = ({ color, width, height }: SingleIcon) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 16 16"
-      aria-hidden="true"
-      // role="presentation"
-      //focusable="false"
-      height="6;"
-      width="6;"
-      //fill= 'rgb(34, 34, 34)'
+      height="18"
+      viewBox="0 -960 960 960"
+      width="18"
+      fill="black"
     >
-      <path d="M5 8a3 3 0 0 1 2.83 2H14v2H7.83A3 3 0 1 1 5 8zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm6-8a3 3 0 1 1-2.83 4H2V4h6.17A3 3 0 0 1 11 2zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
+      <path d="M700-130q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm-.235-60Q733-190 756.5-213.265q23.5-23.264 23.5-56.5Q780-303 756.735-326.5q-23.264-23.5-56.5-23.5Q667-350 643.5-326.735q-23.5 23.264-23.5 56.5Q620-237 643.265-213.5q23.264 23.5 56.5 23.5ZM120-240v-60h360v60H120Zm140-310q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm-.235-60Q293-610 316.5-633.265q23.5-23.264 23.5-56.5Q340-723 316.735-746.5q-23.264-23.5-56.5-23.5Q227-770 203.5-746.735q-23.5 23.264-23.5 56.5Q180-657 203.265-633.5q23.264 23.5 56.5 23.5ZM480-660v-60h360v60H480Z" />
     </svg>
   );
 };
@@ -235,19 +232,16 @@ const ArrowUp = ({ color, width, height }: SingleIcon) => {
 const BigSearch = ({ color, width, height }: SingleIcon) => {
   return (
     <svg
+      width={24}
+      height={24}
+      viewBox="0 0 21 21"
+      fill={'grey'}
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 32 32"
-      aria-hidden="true"
-      role="presentation"
-      focusable="false"
-      fill="none"
-      height="24px"
-      width="24px"
     >
       <path
-        fill="none"
-        d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"
-      ></path>
+        d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2941 12.5699 16.0029 10.8204 16 9C16 5.132 12.867 2 9 2C5.132 2 2 5.132 2 9C2 12.867 5.132 16 9 16C10.8204 16.0029 12.5699 15.2941 13.875 14.025L14.025 13.875Z"
+        fill={"grey"}
+      />
     </svg>
   );
 };
@@ -256,15 +250,12 @@ const Heart = ({ color, width, height }: SingleIcon) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 32 32"
-      aria-hidden="true"
-      role="presentation"
-      focusable="false"
-      fill="none"
-      height="24px"
-      width="24px"
+      height="24"
+      viewBox="0 -960 960 960"
+      width="24"
+      fill="grey"
     >
-      <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"></path>
+      <path d="m480-121-41-37q-105.768-97.121-174.884-167.561Q195-396 154-451.5T96.5-552Q80-597 80-643q0-90.155 60.5-150.577Q201-854 290-854q57 0 105.5 27t84.5 78q42-54 89-79.5T670-854q89 0 149.5 60.423Q880-733.155 880-643q0 46-16.5 91T806-451.5Q765-396 695.884-325.561 626.768-255.121 521-158l-41 37Zm0-79q101.236-92.995 166.618-159.498Q712-426 750.5-476t54-89.135q15.5-39.136 15.5-77.72Q820-709 778-751.5T670.225-794q-51.524 0-95.375 31.5Q531-731 504-674h-49q-26-56-69.85-88-43.851-32-95.375-32Q224-794 182-751.5t-42 108.816Q140-604 155.5-564.5t54 90Q248-424 314-358t166 158Zm0-297Z" />
     </svg>
   );
 };
@@ -277,7 +268,7 @@ const Man = ({ color, width, height }: SingleIcon) => {
       aria-hidden="true"
       role="presentation"
       focusable="false"
-      fill="none"
+      fill="grey"
       height="24px"
       width="24px"
     >
@@ -316,8 +307,8 @@ const Icon = ({ type, color, width, height }: IconProps) => {
       return <BigSearch />;
     case "heart":
       return <Heart />;
-    case 'man':
-      return <Man />
+    case "man":
+      return <Man />;
   }
 };
 
