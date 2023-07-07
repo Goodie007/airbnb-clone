@@ -1,16 +1,18 @@
 import React from "react";
-import { Box, HStack, Text, Flex } from "@chakra-ui/react";
+import { Box, HStack, Text, Flex, VStack } from "@chakra-ui/react";
 import { Icon } from "@/assets/icons/Icon";
+import { lowerItems } from "./SubnavbarItems";
+import { colors } from "@/theme";
 
 export default function LowerNavbar() {
   return (
     <Box
       bgColor={"transparent"}
-      position={"fixed"}
+      position={{base: 'fixed', md: 'fixed', lg:"fixed"}}
       //paddingTop={100}
       width={"100%"}
-      height={50}
-      top={{ base: 0, md: 500, lg: 607 }}
+      height={70}
+      top={{ base: 510, md: 500, lg: 607 }}
       bottom={2}
       borderTopWidth={1}
       paddingLeft={{ base: 4, md: 7, lg: 10 }}
@@ -62,6 +64,16 @@ export default function LowerNavbar() {
             Support & resources <Icon type={"arrowUp"} />{" "}
           </Text>
         </HStack>
+      </HStack>
+      <HStack display={{ base: 'flex', md: 'none', lg: 'none'}} justifyContent={'space-between'} paddingX={'40px'}>
+        {lowerItems.map((lowerItems, index) => {
+            return (
+                <VStack key={index}>
+                    {lowerItems.icon}
+                    <Text fontSize={12} color={colors.grey}>{lowerItems.label}</Text>
+                </VStack>
+            )
+        })}
       </HStack>
     </Box>
   );

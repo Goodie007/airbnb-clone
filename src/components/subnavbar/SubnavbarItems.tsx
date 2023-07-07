@@ -1,7 +1,8 @@
+import { Icon } from "@/assets/icons/Icon";
 import React from "react";
 
 export type NavbarItems = {
-  icons?: React.ReactNode;
+  icon?: React.ReactNode;
   label: string;
 };
 
@@ -67,3 +68,18 @@ export const navbarItems: NavbarItems[] = [
     label: "Play",
   },
 ];
+
+export const lowerItems: NavbarItems[] = [
+  {
+    label: 'Explore',
+    icon: <Icon type="bigSearch" />
+  },
+  {
+    label: "Wishlists",
+    icon: <Icon type="heart" />
+  },
+  {
+    label: 'Log in',
+    icon: <Icon type="man" />
+  }
+]
