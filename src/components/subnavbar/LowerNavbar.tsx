@@ -73,8 +73,8 @@ export default function LowerNavbar() {
       <HStack
         display={{ base: "flex", md: "none", lg: "none" }}
         justifyContent={"space-between"}
-        paddingX={"40px"}
-        paddingTop={1}
+        paddingX={"50px"}
+        paddingTop={2}
       >
         {lowerItems.map((lowerItems, index) => {
           return (
