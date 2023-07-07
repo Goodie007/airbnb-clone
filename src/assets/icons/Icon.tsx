@@ -181,13 +181,53 @@ const Plug = ({ color, width, height }: SingleIcon) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       aria-hidden="true"
-     // role="presentation"
+      // role="presentation"
       //focusable="false"
-      height='6;' 
-      width= '6;' 
+      height="6;"
+      width="6;"
       //fill= 'rgb(34, 34, 34)'
     >
       <path d="M5 8a3 3 0 0 1 2.83 2H14v2H7.83A3 3 0 1 1 5 8zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm6-8a3 3 0 1 1-2.83 4H2V4h6.17A3 3 0 0 1 11 2zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
+    </svg>
+  );
+};
+
+const Privacy = ({ color, width, height }: SingleIcon) => {
+  return (
+    <svg width="26" height="12" fill="none">
+      <rect x="0.5" y="0.5" width="25" height="11" rx="5.5" fill="#fff"></rect>
+      <path d="M14 1h7a5 5 0 010 10H11l3-10z" fill="#06F"></path>
+      <path
+        d="M4.5 6.5l1.774 1.774a.25.25 0 00.39-.049L9.5 3.5"
+        stroke="#06F"
+        stroke-linecap="round"
+      ></path>
+      <path
+        d="M16.5 3.5L19 6m0 0l2.5 2.5M19 6l2.5-2.5M19 6l-2.5 2.5"
+        stroke="#fff"
+        stroke-linecap="round"
+      ></path>
+      <rect
+        x="0.5"
+        y="0.5"
+        width="25"
+        height="11"
+        rx="5.5"
+        stroke="#06F"
+      ></rect>
+    </svg>
+  );
+};
+
+const ArrowUp = ({ color, width, height }: SingleIcon) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="28"
+      viewBox="0 -960 960 960"
+      width="28"
+    >
+      <path d="m283-345-43-43 240-240 240 239-43 43-197-197-197 198Z" />
     </svg>
   );
 };
@@ -212,8 +252,12 @@ const Icon = ({ type, color, width, height }: IconProps) => {
       return <SingleStar />;
     case "searchMobile":
       return <SearchMobile />;
-    case 'plug':
-      return <Plug />
+    case "plug":
+      return <Plug />;
+    case "privacy":
+      return <Privacy />;
+    case "arrowUp":
+      return <ArrowUp />;
   }
 };
 

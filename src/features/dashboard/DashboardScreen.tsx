@@ -1,19 +1,19 @@
-import Navbar from "@/components/Navbar";
 import React from "react";
-import { Box } from "@chakra-ui/react";
-import SubNavbar from "@/components/subnavbar/SubNavbar";
+import { Box, Image } from "@chakra-ui/react";
+import DashboardWrapper from "@/components/DashboardWrapper";
+import LowerNavbar from "@/components/subnavbar/LowerNavbar";
+import Picture from '../../assets/imgs/style3.png'
 
-export default function DashboardScreen() {
+export default function DashboardScreen({ children }: any) {
   return (
-    <Box>
-      <Navbar />
-      <Box
-        width={'100%'}
-        height={'85px'}
-        borderBottomWidth={1}
-        borderColor={'#DCDCDC'}
-      ></Box>
-      <SubNavbar />
+    <Box
+      height={'100vh'}
+    >
+      <DashboardWrapper>
+        <Box>
+          Hello      
+        </Box>
+      </DashboardWrapper>
     </Box>
   );
 }
