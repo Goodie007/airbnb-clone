@@ -17,7 +17,7 @@ export default function DashboardWrapper({children}: any) {
         borderBottomWidth={1}
         borderColor={'#DCDCDC'}
       ></Box>
-      {/* <SubNavbar /> */}
+      <SubNavbar />
       {children}
       <LowerNavbar />
     </Box>

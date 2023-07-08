@@ -133,6 +133,33 @@ const Ratings = ({ color, width, height }: SingleIcon) => {
   );
 };
 
+const IosBack = ({ color, width, height }: SingleIcon) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="20"
+      viewBox="0 -960 960 960"
+      width="20"
+      fill={"#000"}
+    >
+      <path d="M400-80 0-480l400-400 56 57-343 343 343 343-56 57Z" />
+    </svg>
+  );
+};
+
+const IosForward = ({ color, width, height }: SingleIcon) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="20"
+      viewBox="0 -960 960 960"
+      width="20"
+    >
+      <path d="m304-82-56-57 343-343-343-343 56-57 400 400L304-82Z" />
+    </svg>
+  );
+};
+
 const Mark = ({ color, width, height }: SingleIcon) => {
   return (
     <svg
@@ -235,7 +262,7 @@ const BigSearch = ({ color, width, height }: SingleIcon) => {
       width={24}
       height={24}
       viewBox="0 0 21 21"
-      fill={'grey'}
+      fill={"grey"}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -309,6 +336,10 @@ const Icon = ({ type, color, width, height }: IconProps) => {
       return <Heart />;
     case "man":
       return <Man />;
+    case 'forward':
+      return <IosForward />
+    case 'back':
+      return <IosBack />
   }
 };
 
