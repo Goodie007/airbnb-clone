@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   Box,
   HStack,
@@ -20,9 +20,24 @@ import { useSwiper } from "swiper/react";
 import "swiper/css";
 import { navbarItems } from "./SubnavbarItems";
 import { Icon } from "@/assets/icons/Icon";
+// import { register } from "swiper/element/bundle";
+// register();
+
 
 export default function SubNavbar() {
   const swiper = useSwiper();
+  //const swiperRef = useRef<any>(null)
+
+  // useEffect(() => {
+  //   const swiperContainer = swiperRef.current;
+  //   const params = {
+  //     navigation: true,
+  //     pagination: true,
+  //   };
+
+  //   Object.assign({swiperContainer, params});
+  //   swiperContainer.initialize([]);
+  // }, []);
 
   const BackButton = () => {
     return (
@@ -38,7 +53,7 @@ export default function SubNavbar() {
         //left={400}
         // right={400}
         // bottom={400}
-        onClick={() => swiper.slidePrev}
+        onClick={() => swiper.slideNext}
       >
         <Icon type="back" />
       </Box>
@@ -56,7 +71,7 @@ export default function SubNavbar() {
         position={"absolute"}
         zIndex={1000}
         // top={400}
-        left={400}
+        //left={400}
         // right={400}
         // bottom={400}
         onClick={() => swiper.slideNext}
@@ -72,21 +87,24 @@ export default function SubNavbar() {
       width={"100%"}
       paddingX={{ base: 4, md: 0, lg: 10 }}
       paddingY={{ base: 3, md: 0, lg: 0 }}
-      height={70}
-      bgColor={"red"}
+      height={'80px'}
+      //bgColor={"red"}
+      borderBottomWidth={2}
+      //borderColor={'blue'}
     >
       <HStack
         height={"80px"}
         bgColor={"transparent"}
-        paddingY={"25px"}
+       // paddingTop={"30px"}
         justifyContent={"space-between"}
         display={{ base: "none", md: "flex", lg: "flex" }}
+        paddingRight={'30px'}
       >
         <Swiper
           spaceBetween={0}
           slidesPerView={12}
           onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+         // onSwiper={(swiper) => console.log(swiper)}
           effect="flip"
           direction="horizontal"
           cssMode={true}
@@ -103,12 +121,27 @@ export default function SubNavbar() {
             return (
               <>
                 <SwiperSlide key={navbarItems.label}>
-                  <Text fontSize={12}>{navbarItems.label}</Text>
+                  <Text fontSize={12}  paddingTop={"30px"} >{navbarItems.label}</Text>
                 </SwiperSlide>
               </>
             );
           })}
         </Swiper>
+        <Box 
+          width={'130px'}
+          height={'48px'}
+          borderWidth={1}
+          padding={2}
+          paddingX={'18px'}
+          borderRadius={10}
+          alignItems={'center'}
+          display={'flex'}
+          flexDirection={'row'}
+          justifyContent={'space-between'}
+        >
+          <Icon type="plug" />
+          <Text fontSize={'13px'} fontWeight={'500'}>Filter</Text>
+        </Box>
       </HStack>
     </Box>
   );
