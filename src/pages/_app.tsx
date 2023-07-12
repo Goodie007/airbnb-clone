@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { ChakraProvider, theme } from '@chakra-ui/react'
 // `@chakra-ui/theme` is a part of the base install with `@chakra-ui/react`
 import chakraTheme from "@chakra-ui/theme";
+import "../components/subnavbar/style.css"
 
 
 

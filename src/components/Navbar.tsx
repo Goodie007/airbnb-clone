@@ -10,9 +10,10 @@ export default function Navbar() {
     <Box
       position={"fixed"}
       width={"100%"}
-      paddingX={{ base: 4, md: 0, lg: 8 }}
+      paddingX={{ base: 4, md: 0, lg: 10 }}
       paddingY={{ base: 3, md: 0, lg: 0 }}
-      zIndex={1000}
+      zIndex={{base: 1000, md: 1000, lg: 1000}}
+      bgColor={'#FFF'}
     >
       <HStack
         height={"80px"}
@@ -38,14 +39,14 @@ export default function Navbar() {
         <HStack
           width={{base: 0, md: '50%', lg: "30%"}}
           borderWidth={1}
-          bgColor={"transparent"}
+          bgColor={"#FFF"}
           height={"50px"}
           borderRadius={25}
           paddingLeft={{base: 2, md: 4, lg: 10}}
           boxShadow={"base"}
         >
           <Box
-            bgColor={"transparent"}
+            bgColor={"#FFF"}
             height={"30px"}
             paddingY={"3px"}
             width={"28%"}
@@ -56,7 +57,7 @@ export default function Navbar() {
             <Text fontWeight={"500"} fontSize={{ md: 14}} >Anywhere</Text>
           </Box>
           <Box
-            bgColor={"transparent"}
+            bgColor={"#FFF"}
             height={"30px"}
             paddingY={"3px"}
             width={{md: "28%", lg: '28%'}}
@@ -92,7 +93,7 @@ export default function Navbar() {
             //bgColor={'red'}
         >
           <Box
-            bgColor={"transparent"}
+            bgColor={"#FFF"}
             paddingX={2}
             paddingY={2}
             height={"40px"}
@@ -103,7 +104,7 @@ export default function Navbar() {
           </Box>
           <Box
             padding={3}
-            bgColor={"transparent"}
+            bgColor={"#FFF"}
             borderRadius={"42px"}
             width={"42px"}
             height={"42px"}
@@ -112,7 +113,7 @@ export default function Navbar() {
             <Icon type={"globe"} />
           </Box>
           <HStack
-            bgColor={"transparent"}
+            bgColor={"#FFF"}
             paddingX={"5px"}
             height={"42px"}
             width={"70px"}
@@ -154,7 +155,7 @@ export default function Navbar() {
             width={10}
             height={10}
             borderRadius={20}
-            background={'transparent'}
+            background={'#FFF'}
             borderWidth={1}
             padding={'10px'}
         >

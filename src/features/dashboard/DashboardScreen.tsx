@@ -6,17 +6,20 @@ import Picture from "../../assets/imgs/style3.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { homeListing } from "@/components/HomeListingItems";
+import { Icon } from "@/assets/icons/Icon";
 
 export default function DashboardScreen({ children }: any) {
   return (
     <Box>
       <DashboardWrapper>
         <HStack
-          paddingLeft={'30px'}
-          paddingRight={'50px'}
+          // paddingLeft={'30px'}
+          // paddingRight={'50px'}
+          paddingLeft={10}
+          paddingRight={14}
           width={"100%"}
           justifyContent={"space-between"}
-          paddingTop={20}
+          paddingTop={24}
         >
           <Box width={300} borderRadius={10}>
             <Swiper
@@ -39,7 +42,9 @@ export default function DashboardScreen({ children }: any) {
                       position={"relative"}
                       overflowX={"hidden"}
                       borderRadius={10}
-                    ></Box>
+                    >
+                      {/* {items.icon({ color:  })} */}
+                    </Box>
                     <HStack
                       alignItems={"flex-start"}
                       justifyContent={"space-between"}
