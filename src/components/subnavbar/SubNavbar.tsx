@@ -28,18 +28,6 @@ import { Icon } from "@/assets/icons/Icon";
 export default function SubNavbar() {
   const swiper = useSwiper();
   const [swiperRef, setSwiperRef] = useState<SwiperClass>();
-  //const swiperRef = useRef<any>(null)
-
-  // useEffect(() => {
-  //   const swiperContainer = swiperRef.current;
-  //   const params = {
-  //     navigation: true,
-  //     pagination: true,
-  //   };
-
-  //   Object.assign({swiperContainer, params});
-  //   swiperContainer.initialize([]);
-  // }, []);
 
   return (
     <Box
@@ -48,7 +36,7 @@ export default function SubNavbar() {
       // paddingRight={{ base: 4, md: 0, lg: 2 }}
       paddingY={{ base: 3, md: 0, lg: 0 }}
       // paddingLeft={8}
-      paddingX={8}
+      paddingX={{base: 0, md: 6, lg: 8}}
       height={"80px"}
       zIndex={{ base: 1000, md: 1000, lg: 1000 }}
       borderTopWidth={1}
@@ -88,7 +76,7 @@ export default function SubNavbar() {
                     _hover={{
                       borderBottomWidth: 2,
                       borderColor: "#000",
-                      color: '#000'
+                      color: "#000",
                     }}
                     paddingTop={3}
                   >
@@ -99,7 +87,7 @@ export default function SubNavbar() {
                       fontWeight={"500"}
                       color={"grey"}
                       _hover={{
-                        color: 'black'
+                        color: "black",
                       }}
                     >
                       {navbarItems.label}
@@ -127,6 +115,64 @@ export default function SubNavbar() {
             Filter
           </Text>
         </Box>
+      </HStack>
+      <HStack
+        height={"60px"}
+        bgColor={"#FFF"}
+        // paddingTop={"30px"}
+        justifyContent={"space-between"}
+        display={{ base: "flex", md: "flex", lg: "none" }}
+       // paddingRight={"30px"}
+      >
+        <Swiper
+          spaceBetween={0}
+          slidesPerView={5}
+          onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+          effect="flip"
+          direction="horizontal"
+          cssMode={true}
+          navigation={{
+            nextEl: ".swiper-next",
+            prevEl: ".swiper-prev",
+          }}
+          pagination={false}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+        >
+          {navbarItems.map((navbarItems) => {
+            return (
+              <>
+                <SwiperSlide key={navbarItems.label}>
+                  <Box
+                    height={"70px"}
+                    alignItems={"center"}
+                    _hover={{
+                      borderBottomWidth: 2,
+                      borderColor: "#000",
+                      color: "#000",
+                    }}
+                    paddingTop={3}
+                  >
+                    <Text
+                      fontSize={{base: 12, md: 12, lg: 12}}
+                      paddingTop={"29px"}
+                      textAlign={"center"}
+                      fontWeight={"500"}
+                      color={"grey"}
+                      _hover={{
+                        color: "black",
+                      }}
+                    >
+                      {navbarItems.label}
+                    </Text>
+                  </Box>
+                </SwiperSlide>
+              </>
+            );
+          })}
+        </Swiper>
       </HStack>
     </Box>
   );

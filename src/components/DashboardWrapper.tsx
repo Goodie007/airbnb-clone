@@ -18,7 +18,7 @@ export default function DashboardWrapper({children}: any) {
         //height={'85px'}
         borderColor={'#DCDCDC'}
         //bgColor={'blue'}
-        paddingTop={'79px'}
+        paddingTop={{base: '79px', md: '79px', lg:'79px'}}
         zIndex={1000}
         
       ></Box>

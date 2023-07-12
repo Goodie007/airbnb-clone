@@ -89,10 +89,21 @@ export default function DashboardScreen({ children }: any) {
                       overflowX={"hidden"}
                       borderRadius={10}
                     ></Box>
-                    <Text>{items.location}</Text>
-                    <Text>{items.title}</Text>
+                    <HStack
+                      alignItems={"flex-start"}
+                      justifyContent={"space-between"}
+                      paddingTop={1}
+                    >
+                      <Text fontSize={16} fontWeight={'600'}>{items.location}</Text>
+                      <HStack>
+                        {items.star}
+                        <Text>{items.ratings}</Text>
+                      </HStack>
+                    </HStack>
+
+                    <Text fontSize={'15px'}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text>{items.amount}</Text>
+                    <Text fontWeight={'600'}>{items.amount}</Text>
                   </SwiperSlide>
                 );
               })}
@@ -122,10 +133,21 @@ export default function DashboardScreen({ children }: any) {
                       overflowX={"hidden"}
                       borderRadius={10}
                     ></Box>
-                    <Text>{items.location}</Text>
-                    <Text>{items.title}</Text>
+                    <HStack
+                      alignItems={"flex-start"}
+                      justifyContent={"space-between"}
+                      paddingTop={1}
+                    >
+                      <Text fontSize={16} fontWeight={'600'}>{items.location}</Text>
+                      <HStack>
+                        {items.star}
+                        <Text>{items.ratings}</Text>
+                      </HStack>
+                    </HStack>
+
+                    <Text fontSize={'15px'}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text>{items.amount}</Text>
+                    <Text fontWeight={'600'}>{items.amount}</Text>
                   </SwiperSlide>
                 );
               })}
@@ -154,11 +176,22 @@ export default function DashboardScreen({ children }: any) {
                       position={"relative"}
                       overflowX={"hidden"}
                       borderRadius={10}
-                    ></Box>
-                    <Text>{items.location}</Text>
-                    <Text>{items.title}</Text>
+                    > </Box>
+                    <HStack
+                      alignItems={"flex-start"}
+                      justifyContent={"space-between"}
+                      paddingTop={1}
+                    >
+                      <Text fontSize={16} fontWeight={'600'}>{items.location}</Text>
+                      <HStack>
+                        {items.star}
+                        <Text>{items.ratings}</Text>
+                      </HStack>
+                    </HStack>
+
+                    <Text fontSize={'15px'}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text>{items.amount}</Text>
+                    <Text fontWeight={'600'}>{items.amount}</Text>
                   </SwiperSlide>
                 );
               })}
