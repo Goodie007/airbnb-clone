@@ -66,7 +66,7 @@ export default function SubNavbar() {
         bgColor={"blue"}
         width={8}
         height={8}
-        padding={2}
+        padding={1}
         borderRadius={15}
         position={"absolute"}
         zIndex={1000}
@@ -83,18 +83,23 @@ export default function SubNavbar() {
 
   return (
     <Box
-      position={"sticky"}
+      position={"fixed"}
       width={"100%"}
-      paddingX={{ base: 4, md: 0, lg: 10 }}
+      // paddingRight={{ base: 4, md: 0, lg: 2 }}
       paddingY={{ base: 3, md: 0, lg: 0 }}
+      // paddingLeft={8}
+      paddingX={'25px'}
       height={'80px'}
       //bgColor={"red"}
-      borderBottomWidth={2}
+      borderBottomWidth={0}
       //borderColor={'blue'}
+      zIndex={1000}
+      borderTopWidth={1}
+
     >
       <HStack
         height={"80px"}
-        bgColor={"transparent"}
+        bgColor={"#FFF"}
        // paddingTop={"30px"}
         justifyContent={"space-between"}
         display={{ base: "none", md: "flex", lg: "flex" }}

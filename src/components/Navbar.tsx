@@ -10,12 +10,13 @@ export default function Navbar() {
     <Box
       position={"fixed"}
       width={"100%"}
-      paddingX={{ base: 4, md: 0, lg: 10 }}
+      paddingX={{ base: 4, md: 0, lg: 8 }}
       paddingY={{ base: 3, md: 0, lg: 0 }}
+      zIndex={1000}
     >
       <HStack
         height={"80px"}
-        bgColor={"transparent"}
+        bgColor={"#FFF"}
         paddingY={"25px"}
         justifyContent={"space-between"}
         display={{ base: "none", md: "flex", lg: "flex" }}

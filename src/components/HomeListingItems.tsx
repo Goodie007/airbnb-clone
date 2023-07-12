@@ -17,6 +17,7 @@ import Home15 from '../assets/imgs/home15.webp'
 import Home16 from '../assets/imgs/home16.webp'
 import Home17 from '../assets/imgs/home17.webp'
 import Home18 from '../assets/imgs/home18.webp'
+import { Icon } from '@/assets/icons/Icon'
 
 //introduction to genetics
 
@@ -27,151 +28,188 @@ export type HomeListingItems = {
     location: string;
     date: string;
     amount: string;
+    star: React.ReactNode;
+    ratings: string;
 }
 
 export const homeListing: HomeListingItems[] = [
     {
         image: Home1,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos', 
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
     {
         image: Home2,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
     {
         image: Home3,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
     {
         image: Home4,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
     {
         image: Home5,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
     {
         image: Home6,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
     {
         image: Home7,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
     {
         image: Home9,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
     {
         image: Home10,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
     {
         image: Home11,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
-
+        star: <Icon type="star"/>,
+        ratings: '4.6',
     },
     {
         image: Home12,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
     {
         image: Home13,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
     {
         image: Home14,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
     {
         image: Home15,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
     {
         image: Home16,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
     {
         image: Home17,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+       location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
     {
         image: Home18,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
     {
         image: Home1,
         title: 'Bode Thomas Mansion',
-        location: 'Ikeja',
+        location: 'Ikeja, Lagos',
         date: 'Jun 12 - 15',
         amount: '$340',
+        star: <Icon type="star"/>,
+        ratings: '4.6',
 
     },
 ]

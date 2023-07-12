@@ -7,8 +7,9 @@ import { colors } from "@/theme";
 export default function LowerNavbar() {
   return (
     <Box
-      bgColor={"transparent"}
+      bgColor={"#FFF"}
       position={{ base: "fixed", md: "fixed", lg: "fixed" }}
+      zIndex={1000}
       //paddingTop={100}
       width={"100%"}
       height={70}
