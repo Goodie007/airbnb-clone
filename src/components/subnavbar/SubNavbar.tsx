@@ -132,8 +132,9 @@ export default function SubNavbar() {
           </Text>
         </Box>
       </HStack>
+      {/* mobile */}
       <HStack
-        height={"60px"}
+        height={"76px"}
         bgColor={"#FFF"}
         // paddingTop={"30px"}
         justifyContent={"space-between"}
@@ -162,19 +163,17 @@ export default function SubNavbar() {
               <>
                 <SwiperSlide key={navbarItems.label}>
                   <Box
-                    height={"70px"}
+                    height={"80px"}
                     alignItems={"center"}
                     _hover={{
                       borderBottomWidth: 2,
                       borderColor: "#000",
                       color: "#000",
                     }}
-                    paddingTop={2}
+                    paddingTop={4}
+                    //paddingBottom={2}
                   >
                      <Box
-                      // alignItems={'center'}
-                      // alignContent={'center'}
-                      // alignSelf={'center'}
                       paddingTop={4}
                      paddingLeft={6}
                     >
@@ -187,7 +186,7 @@ export default function SubNavbar() {
                       />
                     </Box>
                     <Text
-                      fontSize={{ base: 12, md: 12, lg: 12 }}
+                      fontSize={{ base: 11, md: 12, lg: 12 }}
                       paddingTop={"0px"}
                       textAlign={"center"}
                       fontWeight={"500"}
