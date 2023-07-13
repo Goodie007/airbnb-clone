@@ -169,11 +169,26 @@ export default function SubNavbar() {
                       borderColor: "#000",
                       color: "#000",
                     }}
-                    paddingTop={3}
+                    paddingTop={2}
                   >
+                     <Box
+                      // alignItems={'center'}
+                      // alignContent={'center'}
+                      // alignSelf={'center'}
+                      paddingTop={4}
+                     paddingLeft={6}
+                    >
+                      <Image
+                        src={navbarItems.image}
+                        alt="alt"
+                        width={"20px"}
+                        height={"20px"}
+                        //alignContent={"center"}
+                      />
+                    </Box>
                     <Text
                       fontSize={{ base: 12, md: 12, lg: 12 }}
-                      paddingTop={"29px"}
+                      paddingTop={"0px"}
                       textAlign={"center"}
                       fontWeight={"500"}
                       color={"grey"}
