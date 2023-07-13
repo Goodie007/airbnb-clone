@@ -666,6 +666,7 @@ export default function DashboardScreen({ children }: any) {
               spaceBetween={2}
               scrollbar={{ draggable: true }}
               slidesPerView={1}
+              pagination={true}
             >
               {homeListing.map((items: any) => {
                 return (
@@ -688,9 +689,12 @@ export default function DashboardScreen({ children }: any) {
                           setActive(true);
                           setSelectedMode(!selectedMode);
                         }}
-                        paddingLeft={"250px"}
-                        paddingTop={"15px"}
+                        // paddingLeft={"250px"}
+                        // paddingTop={"15px"}
                         borderRadius={10}
+                        position={'absolute'}
+                        top={2}
+                        right={4}
                       >
                         {/*  {items.icon({
                           color: active === selectedMode ? "grey" : "#FF385C",
