@@ -661,7 +661,7 @@ export default function DashboardScreen({ children }: any) {
           display={{base: 'flex', md: 'none', lg: 'none'}}
          
         >
-          <Box width={280} borderRadius={10} >
+          <Box width={'100%'} borderRadius={10} >
             <Swiper
               spaceBetween={2}
               scrollbar={{ draggable: true }}
