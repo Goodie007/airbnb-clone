@@ -1149,7 +1149,7 @@ export default function DashboardScreen({ children }: any) {
           position={'fixed'}
           //top={100}
           bottom={20}
-          left={{base: 24, md: 330, lg: 600 }}
+          left={{base: 50, md: 330, lg: 600 }}
           right={200}
           zIndex={1000}
           padding={4}
