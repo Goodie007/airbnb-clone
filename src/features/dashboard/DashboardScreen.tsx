@@ -653,8 +653,8 @@ export default function DashboardScreen({ children }: any) {
         </HStack>
         {/* mobile*/}
         <HStack
-          paddingX={'20px'}
-          paddingRight={0}
+          paddingLeft={4}
+          paddingRight={4}
           width={"100%"}
           justifyContent={"space-between"}
           paddingTop={20}
@@ -674,7 +674,7 @@ export default function DashboardScreen({ children }: any) {
                       bgImage={items.image?.src}
                       // width={350}
                       height={250}
-                      width={280}
+                      width={'100%'}
                       backgroundPosition="center"
                       backgroundRepeat="no-repeat"
                       backgroundBlendMode={"screen"}
