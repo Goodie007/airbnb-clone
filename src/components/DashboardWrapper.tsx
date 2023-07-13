@@ -10,6 +10,8 @@ export default function DashboardWrapper({children}: any) {
       //height={'150vh'}
      // bgColor={'blue'}
      position={'relative'}
+     flexDirection={'column'}
+     justifyContent={'space-between'}
     >
       <Navbar />
      

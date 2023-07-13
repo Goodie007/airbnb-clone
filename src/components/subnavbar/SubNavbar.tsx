@@ -34,9 +34,9 @@ export default function SubNavbar() {
       position={"fixed"}
       width={"100%"}
       // paddingRight={{ base: 4, md: 0, lg: 2 }}
-      paddingY={{ base: 3, md: 0, lg: 0 }}
+      paddingY={{ base: 0, md: 0, lg: 0 }}
       // paddingLeft={8}
-      paddingX={{base: 0, md: 6, lg: 8}}
+      paddingX={{base: 0, md: 0, lg: 8}}
       height={"80px"}
       zIndex={{ base: 1000, md: 1000, lg: 1000 }}
       borderTopWidth={1}
@@ -121,7 +121,7 @@ export default function SubNavbar() {
         bgColor={"#FFF"}
         // paddingTop={"30px"}
         justifyContent={"space-between"}
-        display={{ base: "flex", md: "flex", lg: "none" }}
+        display={{ base: "flex", md: "none", lg: "none" }}
        // paddingRight={"30px"}
       >
         <Swiper
