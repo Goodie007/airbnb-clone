@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import DashboardWrapper from "@/components/DashboardWrapper";
 import LowerNavbar from "@/components/subnavbar/LowerNavbar";
@@ -7,14 +7,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { homeListing } from "@/components/HomeListingItems";
 import { Icon } from "@/assets/icons/Icon";
+import Pink from "@/assets/imgs/pinkie.png";
 
 export default function DashboardScreen({ children }: any) {
+  const [selectedMode, setSelectedMode] = useState<any>(null);
+  const [active, setActive] = useState(false);
   return (
     <Box>
       <DashboardWrapper>
         <HStack
-          // paddingLeft={'30px'}
-          // paddingRight={'50px'}
           paddingLeft={10}
           paddingRight={14}
           width={"100%"}
@@ -43,23 +44,55 @@ export default function DashboardScreen({ children }: any) {
                       overflowX={"hidden"}
                       borderRadius={10}
                     >
-                      {/* {items.icon({ color:  })} */}
+                      <Box
+                        onClick={() => {
+                          setActive(true);
+                          setSelectedMode(!selectedMode);
+                        }}
+                        paddingLeft={"260px"}
+                        paddingTop={"15px"}
+                        borderRadius={10}
+                      >
+                        {/*  {items.icon({
+                          color: active === selectedMode ? "grey" : "#FF385C",
+                        })} */}
+                        {/* <Box
+                          width={'30px'}
+                          height={'30px'}
+                          borderRadius={'30px'}
+                          bgColor={active === selectedMode ? "#FF385C" : "grey" }
+                        >
+                          <Icon type="heart" />
+                        </Box> */}
+                        {active === selectedMode ? (
+                          <Image
+                            src={Pink?.src}
+                            width={"24px"}
+                            height={"24px"}
+                            alt="pink"
+                          />
+                        ) : (
+                          <Icon type="heart" />
+                        )}
+                      </Box>
                     </Box>
                     <HStack
                       alignItems={"flex-start"}
                       justifyContent={"space-between"}
                       paddingTop={1}
                     >
-                      <Text fontSize={16} fontWeight={'600'}>{items.location}</Text>
+                      <Text fontSize={16} fontWeight={"600"}>
+                        {items.location}
+                      </Text>
                       <HStack>
                         {items.star}
                         <Text>{items.ratings}</Text>
                       </HStack>
                     </HStack>
 
-                    <Text fontSize={'15px'}>{items.title}</Text>
+                    <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={'600'}>{items.amount}</Text>
+                    <Text fontWeight={"600"}>{items.amount}</Text>
                   </SwiperSlide>
                 );
               })}
@@ -88,22 +121,56 @@ export default function DashboardScreen({ children }: any) {
                       position={"relative"}
                       overflowX={"hidden"}
                       borderRadius={10}
-                    ></Box>
+                    >
+                       <Box
+                        onClick={() => {
+                          setActive(true);
+                          setSelectedMode(!selectedMode);
+                        }}
+                        paddingLeft={"260px"}
+                        paddingTop={"15px"}
+                        borderRadius={10}
+                      >
+                        {/*  {items.icon({
+                          color: active === selectedMode ? "grey" : "#FF385C",
+                        })} */}
+                        {/* <Box
+                          width={'30px'}
+                          height={'30px'}
+                          borderRadius={'30px'}
+                          bgColor={active === selectedMode ? "#FF385C" : "grey" }
+                        >
+                          <Icon type="heart" />
+                        </Box> */}
+                        {active === selectedMode ? (
+                          <Image
+                            src={Pink?.src}
+                            width={"24px"}
+                            height={"24px"}
+                            alt="pink"
+                          />
+                        ) : (
+                          <Icon type="heart" />
+                        )}
+                      </Box>
+                    </Box>
                     <HStack
                       alignItems={"flex-start"}
                       justifyContent={"space-between"}
                       paddingTop={1}
                     >
-                      <Text fontSize={16} fontWeight={'600'}>{items.location}</Text>
+                      <Text fontSize={16} fontWeight={"600"}>
+                        {items.location}
+                      </Text>
                       <HStack>
                         {items.star}
                         <Text>{items.ratings}</Text>
                       </HStack>
                     </HStack>
 
-                    <Text fontSize={'15px'}>{items.title}</Text>
+                    <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={'600'}>{items.amount}</Text>
+                    <Text fontWeight={"600"}>{items.amount}</Text>
                   </SwiperSlide>
                 );
               })}
@@ -132,22 +199,56 @@ export default function DashboardScreen({ children }: any) {
                       position={"relative"}
                       overflowX={"hidden"}
                       borderRadius={10}
-                    ></Box>
+                    >
+                       <Box
+                        onClick={() => {
+                          setActive(true);
+                          setSelectedMode(!selectedMode);
+                        }}
+                        paddingLeft={"260px"}
+                        paddingTop={"15px"}
+                        borderRadius={10}
+                      >
+                        {/*  {items.icon({
+                          color: active === selectedMode ? "grey" : "#FF385C",
+                        })} */}
+                        {/* <Box
+                          width={'30px'}
+                          height={'30px'}
+                          borderRadius={'30px'}
+                          bgColor={active === selectedMode ? "#FF385C" : "grey" }
+                        >
+                          <Icon type="heart" />
+                        </Box> */}
+                        {active === selectedMode ? (
+                          <Image
+                            src={Pink?.src}
+                            width={"24px"}
+                            height={"24px"}
+                            alt="pink"
+                          />
+                        ) : (
+                          <Icon type="heart" />
+                        )}
+                      </Box>
+                    </Box>
                     <HStack
                       alignItems={"flex-start"}
                       justifyContent={"space-between"}
                       paddingTop={1}
                     >
-                      <Text fontSize={16} fontWeight={'600'}>{items.location}</Text>
+                      <Text fontSize={16} fontWeight={"600"}>
+                        {items.location}
+                      </Text>
                       <HStack>
                         {items.star}
                         <Text>{items.ratings}</Text>
                       </HStack>
                     </HStack>
 
-                    <Text fontSize={'15px'}>{items.title}</Text>
+                    <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={'600'}>{items.amount}</Text>
+                    <Text fontWeight={"600"}>{items.amount}</Text>
                   </SwiperSlide>
                 );
               })}
@@ -176,22 +277,56 @@ export default function DashboardScreen({ children }: any) {
                       position={"relative"}
                       overflowX={"hidden"}
                       borderRadius={10}
-                    > </Box>
+                    >
+                       <Box
+                        onClick={() => {
+                          setActive(true);
+                          setSelectedMode(!selectedMode);
+                        }}
+                        paddingLeft={"260px"}
+                        paddingTop={"15px"}
+                        borderRadius={10}
+                      >
+                        {/*  {items.icon({
+                          color: active === selectedMode ? "grey" : "#FF385C",
+                        })} */}
+                        {/* <Box
+                          width={'30px'}
+                          height={'30px'}
+                          borderRadius={'30px'}
+                          bgColor={active === selectedMode ? "#FF385C" : "grey" }
+                        >
+                          <Icon type="heart" />
+                        </Box> */}
+                        {active === selectedMode ? (
+                          <Image
+                            src={Pink?.src}
+                            width={"24px"}
+                            height={"24px"}
+                            alt="pink"
+                          />
+                        ) : (
+                          <Icon type="heart" />
+                        )}
+                      </Box>
+                    </Box>
                     <HStack
                       alignItems={"flex-start"}
                       justifyContent={"space-between"}
                       paddingTop={1}
                     >
-                      <Text fontSize={16} fontWeight={'600'}>{items.location}</Text>
+                      <Text fontSize={16} fontWeight={"600"}>
+                        {items.location}
+                      </Text>
                       <HStack>
                         {items.star}
                         <Text>{items.ratings}</Text>
                       </HStack>
                     </HStack>
 
-                    <Text fontSize={'15px'}>{items.title}</Text>
+                    <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={'600'}>{items.amount}</Text>
+                    <Text fontWeight={"600"}>{items.amount}</Text>
                   </SwiperSlide>
                 );
               })}
@@ -231,16 +366,18 @@ export default function DashboardScreen({ children }: any) {
                       justifyContent={"space-between"}
                       paddingTop={1}
                     >
-                      <Text fontSize={16} fontWeight={'600'}>{items.location}</Text>
+                      <Text fontSize={16} fontWeight={"600"}>
+                        {items.location}
+                      </Text>
                       <HStack>
                         {items.star}
                         <Text>{items.ratings}</Text>
                       </HStack>
                     </HStack>
 
-                    <Text fontSize={'15px'}>{items.title}</Text>
+                    <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={'600'}>{items.amount}</Text>
+                    <Text fontWeight={"600"}>{items.amount}</Text>
                   </SwiperSlide>
                 );
               })}
