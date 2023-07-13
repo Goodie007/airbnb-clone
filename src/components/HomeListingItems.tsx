@@ -30,6 +30,7 @@ export type HomeListingItems = {
   amount: string;
   star: React.ReactNode;
   ratings: string;
+  time: string;
 };
 
 export const homeListing: HomeListingItems[] = [
@@ -42,6 +43,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home2,
@@ -52,6 +54,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home3,
@@ -62,6 +65,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home4,
@@ -72,6 +76,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home5,
@@ -82,6 +87,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home6,
@@ -92,6 +98,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home7,
@@ -102,6 +109,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home9,
@@ -112,6 +120,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home10,
@@ -122,6 +131,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home11,
@@ -132,6 +142,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home12,
@@ -142,6 +153,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home13,
@@ -152,6 +164,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home14,
@@ -162,6 +175,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home15,
@@ -172,6 +186,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home16,
@@ -182,6 +197,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home17,
@@ -192,6 +208,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home18,
@@ -202,6 +219,7 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
   {
     image: Home1,
@@ -212,5 +230,6 @@ export const homeListing: HomeListingItems[] = [
     star: <Icon type="star" />,
     ratings: "4.6",
     icon: ({ color }) => <Icon type="heart" color={color} />,
+    time: 'night'
   },
 ];

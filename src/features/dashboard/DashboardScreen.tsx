@@ -14,7 +14,8 @@ export default function DashboardScreen({ children }: any) {
   const [active, setActive] = useState(false);
   const swiperRef = useRef<any>(null);
 
- {/*} useEffect(() => {
+  {
+    /*} useEffect(() => {
     const swiperContainer = swiperRef.current;
     const params = {
       navigation: true,
@@ -23,8 +24,9 @@ export default function DashboardScreen({ children }: any) {
 
     Object.assign(swiperContainer, params);
     swiperContainer.initialize([]);
-  }, []); */}
-  
+  }, []); */
+  }
+
   return (
     <Box>
       <DashboardWrapper>
@@ -41,8 +43,8 @@ export default function DashboardScreen({ children }: any) {
               spaceBetween={2}
               scrollbar={{ draggable: true }}
               slidesPerView={1}
-              pagination={{clickable: true}}
-             // ref={swiperRef}
+              pagination={{ clickable: true }}
+              // ref={swiperRef}
               init={false}
             >
               {homeListing.map((items: any) => {
@@ -109,7 +111,16 @@ export default function DashboardScreen({ children }: any) {
 
                     <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={"600"}>{items.amount}</Text>
+                    <Box display={"flex"} flexDirection={"row"}>
+                      <Text fontWeight={"600"}>{items.amount}</Text>
+                      <Text
+                        paddingLeft={"3px"}
+                        paddingTop={"1px"}
+                        fontSize={14}
+                      >
+                        {items.time}
+                      </Text>
+                    </Box>
                   </SwiperSlide>
                 );
               })}
@@ -187,7 +198,17 @@ export default function DashboardScreen({ children }: any) {
 
                     <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={"600"}>{items.amount}</Text>
+                    <Box display={"flex"} flexDirection={"row"}>
+                      <Text fontWeight={"600"}>{items.amount}</Text>
+                      <Text
+                        paddingLeft={"3px"}
+                        paddingTop={"1px"}
+                        fontSize={14}
+                      >
+                        {items.time}
+                      </Text>
+                    </Box>
+                    
                   </SwiperSlide>
                 );
               })}
@@ -265,7 +286,16 @@ export default function DashboardScreen({ children }: any) {
 
                     <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={"600"}>{items.amount}</Text>
+                    <Box display={"flex"} flexDirection={"row"}>
+                      <Text fontWeight={"600"}>{items.amount}</Text>
+                      <Text
+                        paddingLeft={"3px"}
+                        paddingTop={"1px"}
+                        fontSize={14}
+                      >
+                        {items.time}
+                      </Text>
+                    </Box>
                   </SwiperSlide>
                 );
               })}
@@ -343,7 +373,16 @@ export default function DashboardScreen({ children }: any) {
 
                     <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={"600"}>{items.amount}</Text>
+                    <Box display={"flex"} flexDirection={"row"}>
+                      <Text fontWeight={"600"}>{items.amount}</Text>
+                      <Text
+                        paddingLeft={"3px"}
+                        paddingTop={"1px"}
+                        fontSize={14}
+                      >
+                        {items.time}
+                      </Text>
+                    </Box>
                   </SwiperSlide>
                 );
               })}
@@ -427,7 +466,16 @@ export default function DashboardScreen({ children }: any) {
 
                     <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={"600"}>{items.amount}</Text>
+                    <Box display={"flex"} flexDirection={"row"}>
+                      <Text fontWeight={"600"}>{items.amount}</Text>
+                      <Text
+                        paddingLeft={"3px"}
+                        paddingTop={"1px"}
+                        fontSize={14}
+                      >
+                        {items.time}
+                      </Text>
+                    </Box>
                   </SwiperSlide>
                 );
               })}
@@ -503,7 +551,16 @@ export default function DashboardScreen({ children }: any) {
 
                     <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={"600"}>{items.amount}</Text>
+                    <Box display={"flex"} flexDirection={"row"}>
+                      <Text fontWeight={"600"}>{items.amount}</Text>
+                      <Text
+                        paddingLeft={"3px"}
+                        paddingTop={"1px"}
+                        fontSize={14}
+                      >
+                        {items.time}
+                      </Text>
+                    </Box>
                   </SwiperSlide>
                 );
               })}
@@ -579,7 +636,16 @@ export default function DashboardScreen({ children }: any) {
 
                     <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={"600"}>{items.amount}</Text>
+                    <Box display={"flex"} flexDirection={"row"}>
+                      <Text fontWeight={"600"}>{items.amount}</Text>
+                      <Text
+                        paddingLeft={"3px"}
+                        paddingTop={"1px"}
+                        fontSize={14}
+                      >
+                        {items.time}
+                      </Text>
+                    </Box>
                   </SwiperSlide>
                 );
               })}
@@ -655,7 +721,16 @@ export default function DashboardScreen({ children }: any) {
 
                     <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={"600"}>{items.amount}</Text>
+                    <Box display={"flex"} flexDirection={"row"}>
+                      <Text fontWeight={"600"}>{items.amount}</Text>
+                      <Text
+                        paddingLeft={"3px"}
+                        paddingTop={"1px"}
+                        fontSize={14}
+                      >
+                        {items.time}
+                      </Text>
+                    </Box>
                   </SwiperSlide>
                 );
               })}
@@ -741,7 +816,16 @@ export default function DashboardScreen({ children }: any) {
 
                     <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={"600"}>{items.amount}</Text>
+                    <Box display={"flex"} flexDirection={"row"}>
+                      <Text fontWeight={"600"}>{items.amount}</Text>
+                      <Text
+                        paddingLeft={"3px"}
+                        paddingTop={"1px"}
+                        fontSize={14}
+                      >
+                        {items.time}
+                      </Text>
+                    </Box>
                   </SwiperSlide>
                 );
               })}
@@ -819,7 +903,16 @@ export default function DashboardScreen({ children }: any) {
 
                     <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={"600"}>{items.amount}</Text>
+                    <Box display={"flex"} flexDirection={"row"}>
+                      <Text fontWeight={"600"}>{items.amount}</Text>
+                      <Text
+                        paddingLeft={"3px"}
+                        paddingTop={"1px"}
+                        fontSize={14}
+                      >
+                        {items.time}
+                      </Text>
+                    </Box>
                   </SwiperSlide>
                 );
               })}
@@ -909,7 +1002,16 @@ export default function DashboardScreen({ children }: any) {
 
                     <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={"600"}>{items.amount}</Text>
+                    <Box display={"flex"} flexDirection={"row"}>
+                      <Text fontWeight={"600"}>{items.amount}</Text>
+                      <Text
+                        paddingLeft={"3px"}
+                        paddingTop={"1px"}
+                        fontSize={14}
+                      >
+                        {items.time}
+                      </Text>
+                    </Box>
                   </SwiperSlide>
                 );
               })}
@@ -998,13 +1100,64 @@ export default function DashboardScreen({ children }: any) {
 
                     <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text fontWeight={"600"}>{items.amount}</Text>
+                    <Box display={"flex"} flexDirection={"row"}>
+                      <Text fontWeight={"600"}>{items.amount}</Text>
+                      <Text
+                        paddingLeft={"3px"}
+                        paddingTop={"1px"}
+                        fontSize={14}
+                      >
+                        {items.time}
+                      </Text>
+                    </Box>
                   </SwiperSlide>
                 );
               })}
             </Swiper>
           </Box>
         </HStack>
+        <Box
+          bgColor={'#222222'}
+          width={'130px'}
+          height={'50px'}
+          flexDirection={'row'}
+          display={{base: 'none', lg: 'flex'}}
+          alignItems={'center'}
+          color={"#FFF"}
+          borderRadius={'50px'}
+          position={'fixed'}
+          //top={100}
+          bottom={20}
+          left={{base: 24, md: 600, lg: 600 }}
+          right={200}
+          zIndex={1000}
+          padding={4}
+          justifyContent={'space-between'}
+          fontSize={14}
+        >Show map 
+          <Icon type="map" />
+        </Box>
+        <Box
+          bgColor={'#222222'}
+          width={'90px'}
+          height={'40px'}
+          flexDirection={'row'}
+          display={{base: 'flex', lg: 'none'}}
+          alignItems={'center'}
+          color={"#FFF"}
+          borderRadius={'50px'}
+          position={'fixed'}
+          //top={100}
+          bottom={20}
+          left={{base: 24, md: 330, lg: 600 }}
+          right={200}
+          zIndex={1000}
+          padding={4}
+          justifyContent={'space-between'}
+          fontSize={14}
+        > Map 
+          <Icon type="map" />
+        </Box>
       </DashboardWrapper>
     </Box>
   );
