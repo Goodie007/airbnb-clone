@@ -3,6 +3,7 @@ import {
   Box,
   HStack,
   Text,
+  Image,
   IconButton,
   useBreakpointValue,
 } from "@chakra-ui/react";
@@ -36,7 +37,7 @@ export default function SubNavbar() {
       // paddingRight={{ base: 4, md: 0, lg: 2 }}
       paddingY={{ base: 0, md: 0, lg: 0 }}
       // paddingLeft={8}
-      paddingX={{base: 0, md: 0, lg: 8}}
+      paddingX={{ base: 0, md: 0, lg: 8 }}
       height={"80px"}
       zIndex={{ base: 1000, md: 1000, lg: 1000 }}
       borderTopWidth={1}
@@ -80,9 +81,24 @@ export default function SubNavbar() {
                     }}
                     paddingTop={3}
                   >
+                    <Box
+                      // alignItems={'center'}
+                      // alignContent={'center'}
+                      // alignSelf={'center'}
+                      paddingTop={4}
+                     paddingLeft={10}
+                    >
+                      <Image
+                        src={navbarItems.image}
+                        alt="alt"
+                        width={"20px"}
+                        height={"20px"}
+                        //alignContent={"center"}
+                      />
+                    </Box>
                     <Text
                       fontSize={12}
-                      paddingTop={"30px"}
+                      paddingTop={"0px"}
                       textAlign={"center"}
                       fontWeight={"500"}
                       color={"grey"}
@@ -122,7 +138,7 @@ export default function SubNavbar() {
         // paddingTop={"30px"}
         justifyContent={"space-between"}
         display={{ base: "flex", md: "none", lg: "none" }}
-       // paddingRight={"30px"}
+        // paddingRight={"30px"}
       >
         <Swiper
           spaceBetween={0}
@@ -156,7 +172,7 @@ export default function SubNavbar() {
                     paddingTop={3}
                   >
                     <Text
-                      fontSize={{base: 12, md: 12, lg: 12}}
+                      fontSize={{ base: 12, md: 12, lg: 12 }}
                       paddingTop={"29px"}
                       textAlign={"center"}
                       fontWeight={"500"}

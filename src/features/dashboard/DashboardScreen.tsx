@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Box, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import DashboardWrapper from "@/components/DashboardWrapper";
 import LowerNavbar from "@/components/subnavbar/LowerNavbar";
@@ -12,6 +12,19 @@ import Pink from "@/assets/imgs/pinkie.png";
 export default function DashboardScreen({ children }: any) {
   const [selectedMode, setSelectedMode] = useState<any>(null);
   const [active, setActive] = useState(false);
+  const swiperRef = useRef<any>(null);
+
+ {/*} useEffect(() => {
+    const swiperContainer = swiperRef.current;
+    const params = {
+      navigation: true,
+      pagination: true,
+    };
+
+    Object.assign(swiperContainer, params);
+    swiperContainer.initialize([]);
+  }, []); */}
+  
   return (
     <Box>
       <DashboardWrapper>
@@ -21,14 +34,16 @@ export default function DashboardScreen({ children }: any) {
           width={"100%"}
           justifyContent={"space-between"}
           paddingTop={24}
-          display={{base: 'none', md: 'none', lg: 'flex'}}
-         
+          display={{ base: "none", md: "none", lg: "flex" }}
         >
-          <Box width={300} borderRadius={10} >
+          <Box width={300} borderRadius={10}>
             <Swiper
               spaceBetween={2}
               scrollbar={{ draggable: true }}
               slidesPerView={1}
+              pagination={{clickable: true}}
+             // ref={swiperRef}
+              init={false}
             >
               {homeListing.map((items: any) => {
                 return (
@@ -37,7 +52,7 @@ export default function DashboardScreen({ children }: any) {
                       bgImage={items.image?.src}
                       // width={350}
                       height={300}
-                      width={300}
+                      width={"100%"}
                       backgroundPosition="center"
                       backgroundRepeat="no-repeat"
                       backgroundBlendMode={"screen"}
@@ -124,7 +139,7 @@ export default function DashboardScreen({ children }: any) {
                       overflowX={"hidden"}
                       borderRadius={10}
                     >
-                       <Box
+                      <Box
                         onClick={() => {
                           setActive(true);
                           setSelectedMode(!selectedMode);
@@ -202,7 +217,7 @@ export default function DashboardScreen({ children }: any) {
                       overflowX={"hidden"}
                       borderRadius={10}
                     >
-                       <Box
+                      <Box
                         onClick={() => {
                           setActive(true);
                           setSelectedMode(!selectedMode);
@@ -280,7 +295,7 @@ export default function DashboardScreen({ children }: any) {
                       overflowX={"hidden"}
                       borderRadius={10}
                     >
-                       <Box
+                      <Box
                         onClick={() => {
                           setActive(true);
                           setSelectedMode(!selectedMode);
@@ -340,7 +355,7 @@ export default function DashboardScreen({ children }: any) {
           width={"100%"}
           justifyContent={"space-between"}
           paddingTop={10}
-          display={{base: 'none', md: 'none', lg: 'flex'}}
+          display={{ base: "none", md: "none", lg: "flex" }}
         >
           <Box width={300} borderRadius={10}>
             <Swiper
@@ -355,7 +370,7 @@ export default function DashboardScreen({ children }: any) {
                       bgImage={items.image?.src}
                       // width={350}
                       height={300}
-                      width={300}
+                      width={"100%"}
                       backgroundPosition="center"
                       backgroundRepeat="no-repeat"
                       backgroundBlendMode={"screen"}
@@ -363,7 +378,39 @@ export default function DashboardScreen({ children }: any) {
                       position={"relative"}
                       overflowX={"hidden"}
                       borderRadius={10}
-                    ></Box>
+                    >
+                      <Box
+                        onClick={() => {
+                          setActive(true);
+                          setSelectedMode(!selectedMode);
+                        }}
+                        paddingLeft={"260px"}
+                        paddingTop={"15px"}
+                        borderRadius={10}
+                      >
+                        {/*  {items.icon({
+                          color: active === selectedMode ? "grey" : "#FF385C",
+                        })} */}
+                        {/* <Box
+                          width={'30px'}
+                          height={'30px'}
+                          borderRadius={'30px'}
+                          bgColor={active === selectedMode ? "#FF385C" : "grey" }
+                        >
+                          <Icon type="heart" />
+                        </Box> */}
+                        {active === selectedMode ? (
+                          <Image
+                            src={Pink?.src}
+                            width={"24px"}
+                            height={"24px"}
+                            alt="pink"
+                          />
+                        ) : (
+                          <Icon type="heart" />
+                        )}
+                      </Box>
+                    </Box>
                     <HStack
                       alignItems={"flex-start"}
                       justifyContent={"space-between"}
@@ -386,10 +433,8 @@ export default function DashboardScreen({ children }: any) {
               })}
             </Swiper>
           </Box>
-          <Box width={300} justifyContent={"space-between"} borderRadius={10}>
+          <Box width={300} borderRadius={10}>
             <Swiper
-              //width={1290}
-              //  height={300}
               spaceBetween={2}
               scrollbar={{ draggable: true }}
               slidesPerView={1}
@@ -409,20 +454,63 @@ export default function DashboardScreen({ children }: any) {
                       position={"relative"}
                       overflowX={"hidden"}
                       borderRadius={10}
-                    ></Box>
-                    <Text>{items.location}</Text>
-                    <Text>{items.title}</Text>
+                    >
+                      <Box
+                        onClick={() => {
+                          setActive(true);
+                          setSelectedMode(!selectedMode);
+                        }}
+                        paddingLeft={"260px"}
+                        paddingTop={"15px"}
+                        borderRadius={10}
+                      >
+                        {/*  {items.icon({
+                          color: active === selectedMode ? "grey" : "#FF385C",
+                        })} */}
+                        {/* <Box
+                          width={'30px'}
+                          height={'30px'}
+                          borderRadius={'30px'}
+                          bgColor={active === selectedMode ? "#FF385C" : "grey" }
+                        >
+                          <Icon type="heart" />
+                        </Box> */}
+                        {active === selectedMode ? (
+                          <Image
+                            src={Pink?.src}
+                            width={"24px"}
+                            height={"24px"}
+                            alt="pink"
+                          />
+                        ) : (
+                          <Icon type="heart" />
+                        )}
+                      </Box>
+                    </Box>
+                    <HStack
+                      alignItems={"flex-start"}
+                      justifyContent={"space-between"}
+                      paddingTop={1}
+                    >
+                      <Text fontSize={16} fontWeight={"600"}>
+                        {items.location}
+                      </Text>
+                      <HStack>
+                        {items.star}
+                        <Text>{items.ratings}</Text>
+                      </HStack>
+                    </HStack>
+
+                    <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text>{items.amount}</Text>
+                    <Text fontWeight={"600"}>{items.amount}</Text>
                   </SwiperSlide>
                 );
               })}
             </Swiper>
           </Box>
-          <Box width={300} justifyContent={"space-between"} borderRadius={10}>
+          <Box width={300} borderRadius={10}>
             <Swiper
-              //width={1290}
-              //  height={300}
               spaceBetween={2}
               scrollbar={{ draggable: true }}
               slidesPerView={1}
@@ -442,20 +530,63 @@ export default function DashboardScreen({ children }: any) {
                       position={"relative"}
                       overflowX={"hidden"}
                       borderRadius={10}
-                    ></Box>
-                    <Text>{items.location}</Text>
-                    <Text>{items.title}</Text>
+                    >
+                      <Box
+                        onClick={() => {
+                          setActive(true);
+                          setSelectedMode(!selectedMode);
+                        }}
+                        paddingLeft={"260px"}
+                        paddingTop={"15px"}
+                        borderRadius={10}
+                      >
+                        {/*  {items.icon({
+                          color: active === selectedMode ? "grey" : "#FF385C",
+                        })} */}
+                        {/* <Box
+                          width={'30px'}
+                          height={'30px'}
+                          borderRadius={'30px'}
+                          bgColor={active === selectedMode ? "#FF385C" : "grey" }
+                        >
+                          <Icon type="heart" />
+                        </Box> */}
+                        {active === selectedMode ? (
+                          <Image
+                            src={Pink?.src}
+                            width={"24px"}
+                            height={"24px"}
+                            alt="pink"
+                          />
+                        ) : (
+                          <Icon type="heart" />
+                        )}
+                      </Box>
+                    </Box>
+                    <HStack
+                      alignItems={"flex-start"}
+                      justifyContent={"space-between"}
+                      paddingTop={1}
+                    >
+                      <Text fontSize={16} fontWeight={"600"}>
+                        {items.location}
+                      </Text>
+                      <HStack>
+                        {items.star}
+                        <Text>{items.ratings}</Text>
+                      </HStack>
+                    </HStack>
+
+                    <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text>{items.amount}</Text>
+                    <Text fontWeight={"600"}>{items.amount}</Text>
                   </SwiperSlide>
                 );
               })}
             </Swiper>
           </Box>
-          <Box width={300} justifyContent={"space-between"}>
+          <Box width={300} borderRadius={10}>
             <Swiper
-              //width={1290}
-              //  height={300}
               spaceBetween={2}
               scrollbar={{ draggable: true }}
               slidesPerView={1}
@@ -475,11 +606,56 @@ export default function DashboardScreen({ children }: any) {
                       position={"relative"}
                       overflowX={"hidden"}
                       borderRadius={10}
-                    ></Box>
-                    <Text>{items.location}</Text>
-                    <Text>{items.title}</Text>
+                    >
+                      <Box
+                        onClick={() => {
+                          setActive(true);
+                          setSelectedMode(!selectedMode);
+                        }}
+                        paddingLeft={"260px"}
+                        paddingTop={"15px"}
+                        borderRadius={10}
+                      >
+                        {/*  {items.icon({
+                          color: active === selectedMode ? "grey" : "#FF385C",
+                        })} */}
+                        {/* <Box
+                          width={'30px'}
+                          height={'30px'}
+                          borderRadius={'30px'}
+                          bgColor={active === selectedMode ? "#FF385C" : "grey" }
+                        >
+                          <Icon type="heart" />
+                        </Box> */}
+                        {active === selectedMode ? (
+                          <Image
+                            src={Pink?.src}
+                            width={"24px"}
+                            height={"24px"}
+                            alt="pink"
+                          />
+                        ) : (
+                          <Icon type="heart" />
+                        )}
+                      </Box>
+                    </Box>
+                    <HStack
+                      alignItems={"flex-start"}
+                      justifyContent={"space-between"}
+                      paddingTop={1}
+                    >
+                      <Text fontSize={16} fontWeight={"600"}>
+                        {items.location}
+                      </Text>
+                      <HStack>
+                        {items.star}
+                        <Text>{items.ratings}</Text>
+                      </HStack>
+                    </HStack>
+
+                    <Text fontSize={"15px"}>{items.title}</Text>
                     <Text>{items.date}</Text>
-                    <Text>{items.amount}</Text>
+                    <Text fontWeight={"600"}>{items.amount}</Text>
                   </SwiperSlide>
                 );
               })}
@@ -493,10 +669,9 @@ export default function DashboardScreen({ children }: any) {
           width={"100%"}
           justifyContent={"space-between"}
           paddingTop={24}
-          display={{base: 'none', md: 'flex', lg: 'none'}}
-         
+          display={{ base: "none", md: "flex", lg: "none" }}
         >
-          <Box width={300} borderRadius={10} >
+          <Box width={300} borderRadius={10}>
             <Swiper
               spaceBetween={2}
               scrollbar={{ draggable: true }}
@@ -596,7 +771,7 @@ export default function DashboardScreen({ children }: any) {
                       overflowX={"hidden"}
                       borderRadius={10}
                     >
-                       <Box
+                      <Box
                         onClick={() => {
                           setActive(true);
                           setSelectedMode(!selectedMode);
@@ -658,10 +833,9 @@ export default function DashboardScreen({ children }: any) {
           width={"100%"}
           justifyContent={"space-between"}
           paddingTop={20}
-          display={{base: 'flex', md: 'none', lg: 'none'}}
-         
+          display={{ base: "flex", md: "none", lg: "none" }}
         >
-          <Box width={'100%'} borderRadius={10} >
+          <Box width={"100%"} borderRadius={10}>
             <Swiper
               spaceBetween={2}
               scrollbar={{ draggable: true }}
@@ -675,7 +849,7 @@ export default function DashboardScreen({ children }: any) {
                       bgImage={items.image?.src}
                       // width={350}
                       height={250}
-                      width={'100%'}
+                      width={"100%"}
                       backgroundPosition="center"
                       backgroundRepeat="no-repeat"
                       backgroundBlendMode={"screen"}
@@ -692,7 +866,7 @@ export default function DashboardScreen({ children }: any) {
                         // paddingLeft={"250px"}
                         // paddingTop={"15px"}
                         borderRadius={10}
-                        position={'absolute'}
+                        position={"absolute"}
                         top={2}
                         right={4}
                       >
@@ -743,19 +917,19 @@ export default function DashboardScreen({ children }: any) {
           </Box>
         </HStack>
         <HStack
-          paddingX={'20px'}
-          paddingRight={0}
+          paddingLeft={4}
+          paddingRight={4}
           width={"100%"}
           justifyContent={"space-between"}
-          paddingTop={4}
-          display={{base: 'flex', md: 'none', lg: 'none'}}
-         
+          paddingTop={5}
+          display={{ base: "flex", md: "none", lg: "none" }}
         >
-          <Box width={280} borderRadius={10} >
+          <Box width={"100%"} borderRadius={10}>
             <Swiper
               spaceBetween={2}
               scrollbar={{ draggable: true }}
               slidesPerView={1}
+              pagination={true}
             >
               {homeListing.map((items: any) => {
                 return (
@@ -764,7 +938,7 @@ export default function DashboardScreen({ children }: any) {
                       bgImage={items.image?.src}
                       // width={350}
                       height={250}
-                      width={280}
+                      width={"100%"}
                       backgroundPosition="center"
                       backgroundRepeat="no-repeat"
                       backgroundBlendMode={"screen"}
@@ -778,9 +952,12 @@ export default function DashboardScreen({ children }: any) {
                           setActive(true);
                           setSelectedMode(!selectedMode);
                         }}
-                        paddingLeft={"250px"}
-                        paddingTop={"15px"}
+                        // paddingLeft={"250px"}
+                        // paddingTop={"15px"}
                         borderRadius={10}
+                        position={"absolute"}
+                        top={2}
+                        right={4}
                       >
                         {/*  {items.icon({
                           color: active === selectedMode ? "grey" : "#FF385C",
